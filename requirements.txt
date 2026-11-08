@@ -1,0 +1,10 @@
+torch
+transformers
+colpali-engine
+peft
+accelerate
+numpy
+Pillow
+PyMuPDF
+psycopg2-binary
+pgvector
