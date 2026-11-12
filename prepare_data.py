@@ -14,12 +14,11 @@ from psycopg2.extras import execute_values
 def setup():
     model_name = "vidore/colqwen2-v1.0"
 
-    # Apple Silicon GPU when available; otherwise CPU.
-    device = "mps" if torch.backends.mps.is_available() else "cpu"
-
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    dtype = torch.float16 if device == "cuda" else torch.float32
     model = ColQwen2.from_pretrained(
         model_name,
-        torch_dtype=torch.float32,
+        torch_dtype=dtype,
         device_map=device,
     ).eval()
 
@@ -45,10 +44,11 @@ def insert_pages(curr, document_id, filepath, ispoisoned, is_update):
     with pymupdf.open(filepath) as pdf:
         for page_num, page in enumerate(pdf, start=1):
             embeddings = embed_page(page)
+            text = page.get_text().replace("\x00", "")
             if is_update:
                 curr.execute(
                     "UPDATE pages SET text = %s, ispoisoned = %s WHERE docid = %s AND page_num = %s returning id",
-                    (page.get_text(), ispoisoned, document_id, page_num),
+                    (text, ispoisoned, document_id, page_num),
                 )
                 result = curr.fetchone()
                 if result is None:
@@ -58,7 +58,7 @@ def insert_pages(curr, document_id, filepath, ispoisoned, is_update):
                 curr.execute(
                     "INSERT INTO pages (docid, page_num, text, ispoisoned) "
                     "VALUES (%s, %s, %s, %s) RETURNING id ",
-                    (document_id, page_num, page.get_text(), ispoisoned),
+                    (document_id, page_num, text, ispoisoned),
                 )
                 page_id = curr.fetchone()[0]
             rows = [(page_id, position, str(vector)) for position, vector in enumerate(embeddings)]

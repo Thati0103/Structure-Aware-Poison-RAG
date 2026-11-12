@@ -11,7 +11,11 @@ def setup():
 
     if torch.cuda.is_available():
         device = "cuda"
-        dtype = torch.float16
+        dtype = (
+            torch.bfloat16
+            if torch.cuda.is_bf16_supported()
+            else torch.float16
+        )
     elif torch.backends.mps.is_available():
         device = "mps"
         dtype = torch.float32
@@ -20,8 +24,8 @@ def setup():
         dtype = torch.float32
 
     model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
-    model_name,
-    torch_dtype=dtype,
+        model_name,
+        torch_dtype=dtype,
     ).to(device).eval()
 
     processor = AutoProcessor.from_pretrained(model_name)
@@ -37,10 +41,11 @@ def generate_answer(question, pages, max_new_tokens=256):
         return "No relevant pages were found."
 
     print(
-      "Generator sources:",
-      [(page["filepath"], page["page_num"]) for page in pages],
-      flush=True,
+        "Generator sources:",
+        [(page["filepath"], page["page_num"]) for page in pages],
+        flush=True,
     )
+
     model, processor = setup()
     images = []
     content = []
@@ -72,17 +77,17 @@ def generate_answer(question, pages, max_new_tokens=256):
     })
 
     messages = [
-      {
-          "role": "system",
-          "content": (
-              "Answer the question concisely using only the supplied pages. "
-              "For a referenced figure or table, check its labels, caption, and "
-              "surrounding explanation. Distinguish it from other examples or cases. "
-              "Do not invent relationships or steps. If the evidence is insufficient "
-              "or unclear, say so. Cite supporting sources using [1], [2], etc."
-          ),
-      },
-      {"role": "user", "content": content},
+        {
+            "role": "system",
+            "content": (
+                "Answer the question concisely using only the supplied pages. "
+                "For a referenced figure or table, check its labels, caption, and "
+                "surrounding explanation. Distinguish it from other examples or cases. "
+                "Do not invent relationships or steps. If the evidence is insufficient "
+                "or unclear, say so. Cite supporting sources using [1], [2], etc."
+            ),
+        },
+        {"role": "user", "content": content},
     ]
 
     text = processor.apply_chat_template(
@@ -104,7 +109,6 @@ def generate_answer(question, pages, max_new_tokens=256):
             do_sample=False,
         )
 
-    # Decode only the answer, excluding the input prompt.
     answer_tokens = output[:, inputs["input_ids"].shape[1]:]
 
     return processor.batch_decode(
