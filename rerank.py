@@ -9,7 +9,11 @@ from transformers import AutoProcessor, Qwen2VLForConditionalGeneration
 def setup():
     if torch.cuda.is_available():
         device = "cuda"
-        dtype = torch.float16
+        dtype = (
+            torch.bfloat16
+            if torch.cuda.is_bf16_supported()
+            else torch.float16
+        )
     elif torch.backends.mps.is_available():
         device = "mps"
         dtype = torch.float32

@@ -28,7 +28,7 @@ def setup():
         device_map=device,
     ).eval()
 
-    processor = ColQwen2Processor.from_pretrained(model_name)
+    processor = ColQwen2Processor.from_pretrained(model_name, max_num_visual_tokens=1024)
 
     return model, processor
 
@@ -103,8 +103,7 @@ def retrieve_pages(question, top_k=10):
         with torch.inference_mode():
             scores = processor.score_multi_vector(
                 [question_embeddings],
-                embeddings,
-                device="cpu",
+                embeddings
             )[0]
 
         for page, score in zip(batch, scores):
@@ -112,8 +111,18 @@ def retrieve_pages(question, top_k=10):
             page["score"] = score.item()
             results.append(page)
 
-    results.sort(key=lambda page: (-page["score"], page["page_id"]))
-    selected = results[:top_k]
+    results.sort(key=lambda page: page["score"], reverse=True)
+
+    if not results:
+        return []
+
+    # Include every page tied with the kth page.
+    cutoff = results[min(top_k, len(results)) - 1]["score"]
+
+    selected = [
+        page for page in results
+        if page["score"] >= cutoff
+    ]
 
     for rank, page in enumerate(selected, start=1):
         page["retrieval_rank"] = rank

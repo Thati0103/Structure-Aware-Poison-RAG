@@ -15,8 +15,10 @@ CREATE TABLE IF NOT EXISTS pages (
     page_num INTEGER NOT NULL check (page_num > 0),
     text TEXT NOT NULL,
     ispoisoned BOOLEAN NOT NULL,
+    edited_id BIGINT references pages(id) ON DELETE SET NULL,
     unique(docid, page_num)
 );
+
 create table if not exists page_embeddings (
     page_id BIGINT NOT NULL references pages(id),
     embedding VECTOR NOT NULL,
