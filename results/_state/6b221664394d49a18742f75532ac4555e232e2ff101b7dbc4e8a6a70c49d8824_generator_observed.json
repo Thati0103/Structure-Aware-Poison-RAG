@@ -1,0 +1,5 @@
+{
+  "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+  "base_commit": null,
+  "dtype": "torch.bfloat16"
+}

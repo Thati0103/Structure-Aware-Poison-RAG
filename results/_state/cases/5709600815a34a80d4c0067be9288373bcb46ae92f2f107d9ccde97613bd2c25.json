@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [],
+  "prediction": "Final answer: Insufficient evidence.\n\nThe provided information does not specify the ROUGE-2 score for the \"From scratch\" model at a summary length of 75b. The question asks for a specific metric value which is not present in the given context or the description of the table.",
+  "case_fingerprint": "5709600815a34a80d4c0067be9288373bcb46ae92f2f107d9ccde97613bd2c25",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_5c3eae871792",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

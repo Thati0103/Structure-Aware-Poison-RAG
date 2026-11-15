@@ -1,0 +1,5 @@
+{
+  "base_model": "vidore/colqwen2-base",
+  "base_commit": null,
+  "dtype": "torch.float16"
+}

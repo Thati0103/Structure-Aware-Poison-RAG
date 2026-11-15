@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1812.06589v2.pdf",
+      "page_num": 6,
+      "origin_doc": "1812.06589v2.pdf",
+      "slot": "clean",
+      "page_id": "clean:1812.06589v2.pdf:6",
+      "document_id": "7b64f3239038",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "In Table 4 (results of user study) of the paper \"Arbitrary Talking Face Generation via Attentional Audio-Visual Coherence Learning\", Chen et al. [2019] has the higher Realistic rating compared to Zhou et al. [2019].\n\nFinal answer: Chen et al. [2019]",
+  "case_fingerprint": "9bd4b2280fba627366467d8625c347aec6f2080c3b67b3684dca972e4c63713e",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_5c3eae871792",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}
