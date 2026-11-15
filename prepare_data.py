@@ -1,45 +1,28 @@
-# Take documents as inputs
-
-from functools import lru_cache
+"""Store PDF pages and their ColQwen2 embeddings in PostgreSQL."""
 import os
-import psycopg2
+
 import pymupdf
-import database
 import torch
-from colpali_engine.models import ColQwen2, ColQwen2Processor
 from psycopg2.extras import execute_values
 
-@lru_cache(maxsize=1)
-def setup():
-    model_name = "vidore/colqwen2-v1.0"
+import database
+import retrieve
 
-    if torch.cuda.is_available():
-        device = "cuda"
-        dtype = torch.float16
-    elif torch.backends.mps.is_available():
-        device = "mps"
-        dtype = torch.float32
-    else:
-        device = "cpu"
-        dtype = torch.float32
-
-    model = ColQwen2.from_pretrained(
-        model_name,
-        torch_dtype=dtype,
-        device_map=device,
-    ).eval()
-
-    processor = ColQwen2Processor.from_pretrained(model_name, max_num_visual_tokens=1024)
-
-    return model, processor
+# Indexing and retrieval use the same encoder and processor.
+setup = retrieve.setup
+_settings = {}
 
 
-docs_filepath = "data/docs"
+def configure(settings):
+    global _settings
+    _settings = dict(settings)
+    retrieve.configure(settings)
+
 
 def embed_page(page):
     model, processor = setup()
     image = page.get_pixmap(
-        dpi=150, alpha=False
+        dpi=_settings.get("dpi", 150), alpha=False
     ).pil_image().convert("RGB")
 
     inputs = processor.process_images([image]).to(model.device)
@@ -61,7 +44,9 @@ def insert_pages(curr, document_id, filepath, ispoisoned, is_update):
                 )
                 result = curr.fetchone()
                 if result is None:
-                    raise ValueError(f"No page found for document_id {document_id} and page_num {page_num}")
+                    curr.execute("INSERT INTO pages (docid, page_num, text, ispoisoned) VALUES (%s, %s, %s, %s) RETURNING id",
+                                 (document_id, page_num, text, ispoisoned))
+                    result = curr.fetchone()
                 page_id = result[0]
             else:
                 curr.execute(
@@ -92,7 +77,6 @@ def insert_document(filepath, filename, ispoisoned):
     conn = database.create_connection()
     try:
         with conn.cursor() as curr:
-        
             # first check if document already exists in the database
             curr.execute("SELECT * FROM documents WHERE name = %s and ispoisoned = %s and filepath = %s", (filename, ispoisoned, filepath))
             result = curr.fetchone()
@@ -114,11 +98,13 @@ def insert_document(filepath, filename, ispoisoned):
                 is_update = True
 
             insert_pages(curr, document_id, filepath, ispoisoned, is_update)
+            with pymupdf.open(filepath) as pdf:
+                page_count = len(pdf)
+            curr.execute("DELETE FROM page_embeddings WHERE page_id IN (SELECT id FROM pages WHERE docid = %s AND page_num > %s)",
+                         (document_id, page_count))
+            curr.execute("DELETE FROM pages WHERE docid = %s AND page_num > %s", (document_id, page_count))
             conn.commit()
             status = True
-    except psycopg2.DatabaseError as error:
-        print(f"Database error for {os.path.basename(filepath)}: {error}")
-        conn.rollback()
     except Exception as e:
         print(f"Error inserting data for {os.path.basename(filepath)}: {e}")
         conn.rollback()
@@ -127,52 +113,3 @@ def insert_document(filepath, filename, ispoisoned):
 
     return status, document_id if status else None
 
-def prepare_data(ispoisoned):
-    folder = os.path.join(
-        docs_filepath,
-        "pois" if ispoisoned else "non_pois",
-    )
-
-    # read all files in directory for each file 
-    # insert file metadata and pages
-    for filename in os.listdir(folder):
-            filepath = os.path.join(folder, filename)
-            if os.path.isfile(filepath) and filename.lower().endswith(".pdf"):
-                insert_document(filepath, filename, ispoisoned)
-                
-def delete_document(filepath, filename):
-    # connect to the postgresql database
-    conn = database.create_connection()
-    try:
-        with conn.cursor() as curr:
-            # first check if document already exists in the database
-            curr.execute("SELECT id FROM documents WHERE name = %s and filepath = %s", (filename, filepath))
-            result = curr.fetchone()
-            if result is not None:
-                document_id = result[0]
-                # delete existing pages and embeddings for the document
-                curr.execute("DELETE FROM page_embeddings WHERE page_id IN (SELECT id FROM pages WHERE docid = %s)", (document_id,))
-                curr.execute("DELETE FROM pages WHERE docid = %s", (document_id,))
-                curr.execute("DELETE FROM documents WHERE id = %s", (document_id,))
-                conn.commit()
-    except psycopg2.DatabaseError as error:
-        print(f"Database error for {os.path.basename(filepath)}: {error}")
-        conn.rollback()
-    except Exception as e:
-        print(f"Error deleting data for {os.path.basename(filepath)}: {e}")
-        conn.rollback()
-    finally:
-        conn.close()
-        
-def delete_data(ispoisoned):
-    folder = os.path.join(
-        docs_filepath,
-        "pois" if ispoisoned else "non_pois",
-    )
-
-    # read all files in directory for each file 
-    # delete file metadata and pages
-    for filename in os.listdir(folder):
-            filepath = os.path.join(folder, filename)
-            if os.path.isfile(filepath) and filename.lower().endswith(".pdf"):
-                delete_document(filepath, filename)

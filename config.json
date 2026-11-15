@@ -1,0 +1,54 @@
+{
+  "attacks": ["cell", "header", "chart", "layout"],
+  "random_controls": false,
+  "clean_dir": "data/docs/clean",
+  "csv": "data/questions.csv",
+  "results_dir": "results",
+  "retrieval_k": 10,
+  "context_pages": 5,
+  "dpi": 150,
+  "max_visual_tokens": 1024,
+  "max_new_tokens": 256,
+  "seed": 17,
+  "models": {
+    "retriever": {
+      "id": "vidore/colqwen2-v1.0",
+      "revision": null
+    },
+    "reranker": {
+      "id": "lightonai/MonoQwen2-VL-v0.1",
+      "revision": null
+    },
+    "reranker_processor": {
+      "id": "Qwen/Qwen2-VL-2B-Instruct",
+      "revision": null
+    },
+    "generator": {
+      "id": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": null
+    }
+  },
+  "duplicate_dir": "data/docs/duplicates",
+  "variant_dirs": {
+    "cell": "data/docs/cell",
+    "header": "data/docs/header",
+    "random_cell": "data/docs/random_cell",
+    "random_header": "data/docs/random_header",
+    "chart": "data/docs/chart",
+    "layout": "data/docs/layout",
+    "random_chart": "data/docs/random_chart",
+    "random_layout": "data/docs/random_layout"
+  },
+  "questions_file": "data/questions.jsonl",
+  "attacks_file": "data/attacks.jsonl",
+  "state_dir": "results/_state",
+  "database": {
+    "database": "postgres",
+    "user": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "password_env": "PGPASSWORD",
+    "schema": "visual_rag_experiments"
+  },
+  "corpus_warning_multiplier": 5
+}

@@ -1,13 +1,27 @@
+"""Generate answers from page images; leave correctness to the human reviewer."""
 from functools import lru_cache
+
+from prompts import GENERATOR_PROMPT, NO_CONTEXT_PROMPT
 
 import pymupdf
 import torch
 from transformers import AutoProcessor, Qwen2_5_VLForConditionalGeneration
 
 
+
+_settings = {}
+
+def configure(settings):
+    global _settings
+    if settings != _settings:
+        setup.cache_clear()
+    _settings = dict(settings)
+
+
 @lru_cache(maxsize=1)
 def setup():
-    model_name = "Qwen/Qwen2.5-VL-7B-Instruct"
+    spec = _settings.get("models", {}).get("generator", {})
+    model_name = spec.get("id", "Qwen/Qwen2.5-VL-7B-Instruct")
 
     if torch.cuda.is_available():
         device = "cuda"
@@ -25,19 +39,20 @@ def setup():
 
     model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
         model_name,
+        revision=spec.get("revision"),
         torch_dtype=dtype,
     ).to(device).eval()
 
-    processor = AutoProcessor.from_pretrained(model_name)
+    processor = AutoProcessor.from_pretrained(model_name, revision=spec.get("revision"))
 
     return model, processor
 
 
-def generate_answer(question, pages, max_new_tokens=256):
+def generate_answer(question, pages, max_new_tokens=256, allow_no_context=False):
     if not isinstance(question, str) or not question.strip():
         raise ValueError("Question must be a non-empty string.")
 
-    if not pages:
+    if not pages and not allow_no_context:
         return "No relevant pages were found."
 
     print(
@@ -53,7 +68,7 @@ def generate_answer(question, pages, max_new_tokens=256):
     for source_number, page in enumerate(pages, start=1):
         with pymupdf.open(page["filepath"]) as pdf:
             image = pdf[page["page_num"] - 1].get_pixmap(
-                dpi=150,
+                dpi=_settings.get("dpi", 150),
                 alpha=False,
             ).pil_image().convert("RGB")
 
@@ -79,13 +94,7 @@ def generate_answer(question, pages, max_new_tokens=256):
     messages = [
         {
             "role": "system",
-            "content": (
-                "Answer the question concisely using only the supplied pages. "
-                "For a referenced figure or table, check its labels, caption, and "
-                "surrounding explanation. Distinguish it from other examples or cases. "
-                "Do not invent relationships or steps. If the evidence is insufficient "
-                "or unclear, say so. Cite supporting sources using [1], [2], etc."
-            ),
+            "content": GENERATOR_PROMPT if pages else NO_CONTEXT_PROMPT,
         },
         {"role": "user", "content": content},
     ]
@@ -96,11 +105,10 @@ def generate_answer(question, pages, max_new_tokens=256):
         add_generation_prompt=True,
     )
 
-    inputs = processor(
-        text=[text],
-        images=images,
-        return_tensors="pt",
-    ).to(model.device)
+    input_kwargs = {"text": [text], "return_tensors": "pt"}
+    if images:
+        input_kwargs["images"] = images
+    inputs = processor(**input_kwargs).to(model.device)
 
     with torch.inference_mode():
         output = model.generate(

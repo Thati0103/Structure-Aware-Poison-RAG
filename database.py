@@ -1,42 +1,47 @@
-# create schema in database
+"""Existing PostgreSQL storage, with an isolated schema for experiments."""
+import os
+import re
+from pathlib import Path
 
 import psycopg2
+from psycopg2 import sql
+
+_settings = {}
+
+
+def configure(settings):
+    global _settings
+    schema = settings.get("schema", "public")
+    if not re.fullmatch(r"[A-Za-z_][A-Za-z0-9_]*", schema):
+        raise ValueError("Invalid PostgreSQL schema name")
+    _settings = dict(settings)
+
 
 def create_connection():
-    # connect to the postgresql database
-    conn = psycopg2.connect(database="postgres", user="ts", host="localhost")
-    return conn
+    options = {
+        "database": _settings.get("database", os.environ.get("PGDATABASE", "postgres")),
+        "user": _settings.get("user", os.environ.get("PGUSER", "ts")),
+        "host": _settings.get("host", os.environ.get("PGHOST", "localhost")),
+        "port": _settings.get("port", os.environ.get("PGPORT", "5432")),
+    }
+    password = os.environ.get(_settings.get("password_env", "PGPASSWORD"))
+    if password:
+        options["password"] = password
+    schema = _settings.get("schema", "public")
+    if not re.fullmatch(r"[A-Za-z_][A-Za-z0-9_]*", schema):
+        raise ValueError("Invalid PostgreSQL schema name")
+    options["options"] = f'-c search_path={schema},public'
+    return psycopg2.connect(**options)
 
 
 def create_schema():
-    # Read the schema file
-    filepath = "schema.sql"
-    with open (filepath, encoding='utf-8') as file:
-        content = file.read()
-    
-    # connect to the postgresql database
     conn = create_connection()
-    with conn.cursor() as curr:
-        try:
-            curr.execute(content)
-        except psycopg2.DatabaseError as error:
-            print(error)
+    try:
+        with conn:
+            with conn.cursor() as curr:
+                schema = _settings.get("schema", "public")
+                curr.execute(sql.SQL("CREATE SCHEMA IF NOT EXISTS {}").format(sql.Identifier(schema)))
+                curr.execute((Path(__file__).parent / "schema.sql").read_text(encoding="utf-8"))
+    finally:
+        conn.close()
 
-    conn.commit()
-    conn.close()
-
-def drop_database():
-    conn = create_connection()
-    with conn.cursor() as curr:
-        curr.execute("""
-            DROP TABLE IF EXISTS question_embeddings;
-            DROP TABLE IF EXISTS page_embeddings;
-            DROP TABLE IF EXISTS questions;
-            DROP TABLE IF EXISTS pages;
-            DROP TABLE IF EXISTS documents;
-        """)
-
-    conn.commit()
-    conn.close()
-
-create_schema()

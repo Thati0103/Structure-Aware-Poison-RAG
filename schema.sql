@@ -1,12 +1,13 @@
-CREATE EXTENSION IF NOT EXISTS vector;
+CREATE EXTENSION IF NOT EXISTS vector WITH SCHEMA public;
 
 CREATE TABLE IF NOT EXISTS documents (
     id BIGINT GENERATED ALWAYS AS IDENTITY  PRIMARY KEY,
     version INTEGER NOT NULL check (version > 0),
     NAME VARCHAR(255) NOT NULL,
     ispoisoned BOOLEAN NOT NULL,
-    filepath VARCHAR(255) NOT NULL,
-    unique(NAME)
+    filepath TEXT NOT NULL UNIQUE,
+    content_hash TEXT,
+    embedding_signature TEXT
 );
 
 CREATE TABLE IF NOT EXISTS pages (
@@ -39,3 +40,6 @@ Create table if not exists question_embeddings (
     vector_position Integer NOT NULL check (vector_position >= 0),
     primary key(question_id, vector_position)
 );
+
+ALTER TABLE documents ADD COLUMN IF NOT EXISTS content_hash TEXT;
+ALTER TABLE documents ADD COLUMN IF NOT EXISTS embedding_signature TEXT;
