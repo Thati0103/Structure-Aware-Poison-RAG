@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1703.04887v4.pdf",
+      "page_num": 8,
+      "origin_doc": "1703.04887v4.pdf",
+      "slot": "clean",
+      "page_id": "clean:1703.04887v4.pdf:8",
+      "document_id": "ba6fcf9349e7",
+      "ispoisoned": false,
+      "is_edited": false
+    },
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/duplicates/1703.04887v4.pdf",
+      "page_num": 8,
+      "origin_doc": "1703.04887v4.pdf",
+      "slot": "added",
+      "page_id": "added:1703.04887v4.pdf:8",
+      "document_id": "8948b526d3c3",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The BLEU score on NIST03 when N = 25 is 36.04.\n\nFinal answer: 36.04",
+  "case_fingerprint": "6e0bc54c5fb479a2999a770416b7512b6dcd183134b56287b4892e69281ee5b3",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_5c3eae871792",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

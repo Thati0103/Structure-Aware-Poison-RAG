@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1809.01989v2.pdf",
+      "page_num": 4,
+      "origin_doc": "1809.01989v2.pdf",
+      "slot": "clean",
+      "page_id": "clean:1809.01989v2.pdf:4",
+      "document_id": "ed0288a85e26",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "To determine the Mean error of the Cluster method in Table 1, we need to look at the 'Mean' column under the 'Cluster' row.\n\nThe 'Mean' value for the Cluster method is 6.63%.\n\nFinal answer: 6.63%",
+  "case_fingerprint": "c8ee93f3afecb62d045a590f43138942feb191178ef01083f572988d48b41438",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_5c3eae871792",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

@@ -71,7 +71,7 @@ correct answer.
 Check inputs and conditions first:
 
 ```python
-!python run_experiment_a.py --both --skip-visual-check --validate-only
+!python run_experiment_a.py --both --validate-only
 ```
 
 This creates duplicates and JSONL annotations but no model answers.
@@ -81,7 +81,7 @@ Verify your PDF edits manually.
 Then run:
 
 ```python
-!python run_experiment_a.py --both --skip-visual-check
+!python run_experiment_a.py --both
 ```
 
 Add `--clean` for clean baselines only. Omit `--both` for A only; use

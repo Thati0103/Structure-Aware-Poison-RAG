@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1611.04684v1.pdf",
+      "page_num": 6,
+      "origin_doc": "1611.04684v1.pdf",
+      "slot": "clean",
+      "page_id": "clean:1611.04684v1.pdf:6",
+      "document_id": "9f617d5407c0",
+      "ispoisoned": false,
+      "is_edited": false
+    },
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/duplicates/1611.04684v1.pdf",
+      "page_num": 6,
+      "origin_doc": "1611.04684v1.pdf",
+      "slot": "added",
+      "page_id": "added:1611.04684v1.pdf:6",
+      "document_id": "51585dbb981a",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "MV-LSTM has the higher R10@1 compared to Arc2.\n\nFinal answer: MV-LSTM",
+  "case_fingerprint": "ba7e8b962440188d045c24990926b2af4678002bf479b65d40471ccd7a465997",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_5c3eae871792",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

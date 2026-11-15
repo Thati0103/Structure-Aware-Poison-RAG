@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1702.08694v3.pdf",
+      "page_num": 8,
+      "origin_doc": "1702.08694v3.pdf",
+      "slot": "clean",
+      "page_id": "clean:1702.08694v3.pdf:8",
+      "document_id": "3752b765275e",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "In the Recall panel of Figure 3, the C-Tarone method has the higher recall on the ctg dataset.\n\nFinal answer: C-Tarone",
+  "case_fingerprint": "b342b2985aa82345e084ecca9f2595287274c7d8a24d6a45d94f0f656c61b729",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_5c3eae871792",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}
