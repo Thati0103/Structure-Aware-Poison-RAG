@@ -1,0 +1,12 @@
+# Prefer the package versions from your working Colab environment.
+torch
+transformers
+colpali-engine
+peft
+accelerate
+numpy
+Pillow
+PyMuPDF
+psycopg2-binary
+pgvector
+huggingface-hub
