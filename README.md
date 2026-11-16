@@ -27,7 +27,9 @@ The commands below run from the project folder.
 
 ## 2. Prepare data and config
 
-**PDF folders** under `data/docs/`:
+**Dataset folders:** `data/Sindhu/`, `data/Neeharika/`, and `data/Paul/`. Each contains `docs/`, `questions.csv`, and `questions.txt`. The default `config.json` continues to select Sindhu's existing pilot at its new location. To select another owner, update the CSV, clean, variant, duplicate, and generated-annotation paths together.
+
+**PDF folders** under each owner's `docs/`:
 
 | Folder | Contents |
 | --- | --- |
@@ -42,7 +44,7 @@ on different pages; use separate copies for independent edits.
 For full A runs, the clean corpus must exceed retrieval top-k; 50 clean pages
 are recommended for the default top-10 retrieval.
 
-**Questions:** fill `data/questions.csv` using `questions_template.csv`.
+**Questions:** each owner's `questions.csv` uses the same columns as the existing pilot. `questions.txt` contains the same questions in CSV order. Paul's supplied answer key has been mapped into this schema; unavailable descriptive metadata is left blank. For new examples, use `questions_template.csv`.
 
 - Each row needs a unique `question_id`, plus `doc_name`, `question`,
   `support_pages`, and `clean_answer`.
