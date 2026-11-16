@@ -1,8 +1,13 @@
 {
-  "attacks": ["cell", "header", "chart", "layout"],
+  "attacks": [
+    "cell",
+    "header",
+    "chart",
+    "layout"
+  ],
   "random_controls": false,
-  "clean_dir": "data/docs/clean",
-  "csv": "data/questions.csv",
+  "clean_dir": "data/Sindhu/docs/clean",
+  "csv": "data/Sindhu/questions.csv",
   "results_dir": "results",
   "retrieval_k": 10,
   "context_pages": 5,
@@ -28,19 +33,19 @@
       "revision": null
     }
   },
-  "duplicate_dir": "data/docs/duplicates",
+  "duplicate_dir": "data/Sindhu/docs/duplicates",
   "variant_dirs": {
-    "cell": "data/docs/cell",
-    "header": "data/docs/header",
-    "random_cell": "data/docs/random_cell",
-    "random_header": "data/docs/random_header",
-    "chart": "data/docs/chart",
-    "layout": "data/docs/layout",
-    "random_chart": "data/docs/random_chart",
-    "random_layout": "data/docs/random_layout"
+    "cell": "data/Sindhu/docs/cell",
+    "header": "data/Sindhu/docs/header",
+    "random_cell": "data/Sindhu/docs/random_cell",
+    "random_header": "data/Sindhu/docs/random_header",
+    "chart": "data/Sindhu/docs/chart",
+    "layout": "data/Sindhu/docs/layout",
+    "random_chart": "data/Sindhu/docs/random_chart",
+    "random_layout": "data/Sindhu/docs/random_layout"
   },
-  "questions_file": "data/questions.jsonl",
-  "attacks_file": "data/attacks.jsonl",
+  "questions_file": "data/Sindhu/questions.jsonl",
+  "attacks_file": "data/Sindhu/attacks.jsonl",
   "state_dir": "results/_state",
   "database": {
     "database": "postgres",
