@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [],
+  "prediction": "To answer this question, I would need to access the specific Nestle 2011 Strong Full Year Performance table mentioned in the question. However, as I don't have direct access to external databases or tables, I cannot provide the exact value of the Trading Operating Profit listed under \"As reported\" for Nestle in 2011.\n\nFinal answer: Insufficient evidence",
+  "case_fingerprint": "e0441d33d1967a0863d5bde4bcedffef11801da2072827f2956ebaf8da2c223a",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

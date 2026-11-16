@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1611.02654v2.pdf",
+      "page_num": 6,
+      "origin_doc": "1611.02654v2.pdf",
+      "slot": "clean",
+      "page_id": "clean:1611.02654v2.pdf:6",
+      "document_id": "afb23c8962c3",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The ROUGE-1 score for the \"From scratch\" model at a summary length of 75b is 18.29.\n\nFinal answer: 18.29",
+  "case_fingerprint": "85ba25798858f69aaeca5d18b75a6edc331edb907cd1e2de34f477389d4624c5",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

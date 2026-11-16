@@ -1,8 +1,8 @@
 {
   "experiment": "B",
-  "run_dir": "experiment_b_5c3eae871792",
-  "fingerprint": "5c3eae8717926e5bc553de775c06421a881f89b3c47a4caed229b6b66d91e10c",
-  "completed": 156,
-  "total": 156,
-  "updated_utc": "2026-11-15T10:48:35.508702+00:00"
+  "run_dir": "experiment_b_f1d0cc089e91",
+  "fingerprint": "f1d0cc089e918df163527e58ae21983740df22d71085170c8ce1c82eb3ee1d61",
+  "completed": 396,
+  "total": 396,
+  "updated_utc": "2026-11-16T07:46:29.815155+00:00"
 }

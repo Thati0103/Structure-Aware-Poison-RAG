@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/Six_Flags_Over_Georgia.pdf",
+      "page_num": 7,
+      "origin_doc": "Six_Flags_Over_Georgia.pdf",
+      "slot": "clean",
+      "page_id": "clean:Six_Flags_Over_Georgia.pdf:7",
+      "document_id": "332bccf622ce",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The Pay-per-ride attractions section lists two rides: Sky Coaster and Goldtown Racer.\n\nFinal answer: Sky Coaster, Goldtown Racer",
+  "case_fingerprint": "526c0af31108836045aa590cc2453feaf59b4475bd926c799e48e6f20a2794c2",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

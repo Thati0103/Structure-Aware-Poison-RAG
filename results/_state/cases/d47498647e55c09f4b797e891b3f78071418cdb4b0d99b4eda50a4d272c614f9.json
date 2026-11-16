@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/2004_World_Series.pdf",
+      "page_num": 5,
+      "origin_doc": "2004_World_Series.pdf",
+      "slot": "clean",
+      "page_id": "clean:2004_World_Series.pdf:5",
+      "document_id": "1d051b4c83c7",
+      "ispoisoned": false,
+      "is_edited": false
+    },
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/duplicates/2004_World_Series.pdf",
+      "page_num": 5,
+      "origin_doc": "2004_World_Series.pdf",
+      "slot": "added",
+      "page_id": "added:2004_World_Series.pdf:5",
+      "document_id": "da7aebeb59cf",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The Boston team had 13 hits according to the Game 1 box-score table in the 2004 World Series document.",
+  "case_fingerprint": "d47498647e55c09f4b797e891b3f78071418cdb4b0d99b4eda50a4d272c614f9",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1611.02550.pdf",
+      "page_num": 6,
+      "origin_doc": "1611.02550.pdf",
+      "slot": "clean",
+      "page_id": "clean:1611.02550.pdf:6",
+      "document_id": "1bcd67d003d2",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The top t-SNE panel in Figure 3 of paper 1611.02550 shows the word embeddings produced by the classifier model.\n\nFinal answer: classifier",
+  "case_fingerprint": "1cd3cb7cac52d0cdfd12a772ff1497a77841db775a6690922e1b2331b1197b14",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

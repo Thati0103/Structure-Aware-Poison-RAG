@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [],
+  "prediction": "The diameter of the 1 cent coin in circulation varies by country. For example, in the United States, the diameter of the 1 cent coin (penny) is 19 millimeters. However, without specifying which country's coins are being referred to, the exact diameter cannot be determined.\n\nFinal answer: Insufficient evidence.",
+  "case_fingerprint": "c02c762362c36c25df61a516dc88283197dfa71235832635bc7f838700b577a5",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

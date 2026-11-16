@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/4.pdf",
+      "page_num": 3,
+      "origin_doc": "4.pdf",
+      "slot": "clean",
+      "page_id": "clean:4.pdf:3",
+      "document_id": "8b0b40df8fe0",
+      "ispoisoned": false,
+      "is_edited": false
+    },
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/duplicates/4.pdf",
+      "page_num": 3,
+      "origin_doc": "4.pdf",
+      "slot": "added",
+      "page_id": "added:4.pdf:3",
+      "document_id": "13ada6be5257",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The learning-sample size n label for the upper-left plot in Figure 2 is 1.\n\nFinal answer: 1",
+  "case_fingerprint": "67008e0ddf37aa391ac377bc190276a4a0377acc341e62276a9c583abb275bb0",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

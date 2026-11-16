@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/8.pdf",
+      "page_num": 6,
+      "origin_doc": "8.pdf",
+      "slot": "clean",
+      "page_id": "clean:8.pdf:6",
+      "document_id": "ce83789cf3df",
+      "ispoisoned": false,
+      "is_edited": false
+    },
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/duplicates/8.pdf",
+      "page_num": 6,
+      "origin_doc": "8.pdf",
+      "slot": "added",
+      "page_id": "added:8.pdf:6",
+      "document_id": "be769d29da44",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The country with the largest mobile display ad spend in the IAA School Mobile Awareness table sourced to IAB Europe AdEx Benchmark 2013 is Turkey, with a spend of €7.6 million.\n\nFinal answer: Turkey",
+  "case_fingerprint": "2ad46fbc7ea035a13b7238fc00ea4089379edabd120740769480cfb3d41f1fff",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

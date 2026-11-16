@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [],
+  "prediction": "The vertical-axis title of Figure 3 in the keyword-spotting paper is \"Keyword Precision\". This metric measures the proportion of keywords correctly identified by the system out of all the keywords that were supposed to be identified.\n\nFinal answer: Keyword Precision",
+  "case_fingerprint": "61ec435bb3f0c8cbf9c8ccd3d5250de50e147ce38155feed553fd3a75541a3c0",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

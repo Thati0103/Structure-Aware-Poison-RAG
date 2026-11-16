@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1810.03459.pdf",
+      "page_num": 4,
+      "origin_doc": "1810.03459.pdf",
+      "slot": "clean",
+      "page_id": "clean:1810.03459.pdf:4",
+      "document_id": "7f80b2918d7c",
+      "ispoisoned": false,
+      "is_edited": false
+    },
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/duplicates/1810.03459.pdf",
+      "page_num": 4,
+      "origin_doc": "1810.03459.pdf",
+      "slot": "added",
+      "page_id": "added:1810.03459.pdf:4",
+      "document_id": "0d39e8d746d0",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The bar chart in paper 1810.03459 shows the CER for different training conditions across various target languages. For the ~5 hours training condition in the leftmost group (Assamese), the CER reaches approximately 50%. \n\nFinal answer: 50%",
+  "case_fingerprint": "77f566afabd5e0a84cb56e90863204f3f833fa06fbdbfeed3c8e1c242bdae6a2",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [],
+  "prediction": "The specific model used to produce the word embeddings shown in the top t-SNE panel in Figure 3 of paper 1611.02550 is not explicitly stated in the provided information. The figure likely contains a caption or legend that would specify the model, but without direct access to the figure itself, this cannot be determined.\n\nFinal answer: Insufficient evidence.",
+  "case_fingerprint": "d6a54977a0e40b7ed5e2be45ae74e56f957e5e359b4d15ba5b683c1f61dd378a",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

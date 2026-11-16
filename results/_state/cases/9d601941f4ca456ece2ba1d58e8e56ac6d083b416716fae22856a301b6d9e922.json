@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1901.05280.pdf",
+      "page_num": 5,
+      "origin_doc": "1901.05280.pdf",
+      "slot": "clean",
+      "page_id": "clean:1901.05280.pdf:5",
+      "document_id": "3395cbf4ca71",
+      "ispoisoned": false,
+      "is_edited": false
+    },
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/duplicates/1901.05280.pdf",
+      "page_num": 5,
+      "origin_doc": "1901.05280.pdf",
+      "slot": "added",
+      "page_id": "added:1901.05280.pdf:5",
+      "document_id": "b469a3129c83",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "Insufficient evidence.",
+  "case_fingerprint": "9d601941f4ca456ece2ba1d58e8e56ac6d083b416716fae22856a301b6d9e922",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

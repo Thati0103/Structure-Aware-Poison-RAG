@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [],
+  "prediction": "To determine if the North America (N. America) percentage printed in the Alcatel-Lucent GLOBAL REACH revenue strip is greater than 33%, we need to refer to the specific data or report from Alcatel-Lucent for the year in question.\n\nAlcatel-Lucent was a telecommunications company that operated globally, and their revenue strips typically break down revenue by region. However, without access to the exact revenue strip or financial reports for the relevant years, it's impossible to provide a definitive answer based solely on public information.\n\nFinal answer: Insufficient evidence.",
+  "case_fingerprint": "00a46f8899cc29e32621816938232a69e8e25b4988d80aa7feffec49f9c80549",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

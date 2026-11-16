@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [],
+  "prediction": "To answer this question, I would need to refer to the specific data presented in Figure 3(b) of the paper \"Learning Context-Sensitive Convolutional Filters for Text Processing\". However, as the instruction is to provide an answer based solely on the information given in the question without external references, and since the figure's content is not provided here, I cannot determine the exact question type for which AdaQA reaches its highest Mean Average Precision.\n\nFinal answer: Insufficient evidence.",
+  "case_fingerprint": "df6808afedaee8e631cc8b0d97246ff1363e3484c3f03a65a0c1fb16c7232288",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

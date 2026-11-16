@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1.pdf",
+      "page_num": 5,
+      "origin_doc": "1.pdf",
+      "slot": "clean",
+      "page_id": "clean:1.pdf:5",
+      "document_id": "bf2a586b9435",
+      "ispoisoned": false,
+      "is_edited": false
+    },
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/duplicates/1.pdf",
+      "page_num": 5,
+      "origin_doc": "1.pdf",
+      "slot": "added",
+      "page_id": "added:1.pdf:5",
+      "document_id": "990133771aef",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The tracking method named next to the red trajectory in the legend of Figure 5 is \"UWB + IMU (Kalman)\".",
+  "case_fingerprint": "f99046a7f610f8614abeb1c03d3898001a905c60eadae8962d86135518d1f744",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

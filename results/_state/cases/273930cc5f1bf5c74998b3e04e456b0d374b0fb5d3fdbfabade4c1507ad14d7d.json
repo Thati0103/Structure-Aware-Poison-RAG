@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1803.01128v3.pdf",
+      "page_num": 6,
+      "origin_doc": "1803.01128v3.pdf",
+      "slot": "clean",
+      "page_id": "clean:1803.01128v3.pdf:6",
+      "document_id": "b303f57dba7f",
+      "ispoisoned": false,
+      "is_edited": false
+    },
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/duplicates/1803.01128v3.pdf",
+      "page_num": 6,
+      "origin_doc": "1803.01128v3.pdf",
+      "slot": "added",
+      "page_id": "added:1803.01128v3.pdf:6",
+      "document_id": "4360212d5c68",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The perplexity of the Original examples on DUC2003 is 102.02.\n\nFinal answer: 102.02",
+  "case_fingerprint": "273930cc5f1bf5c74998b3e04e456b0d374b0fb5d3fdbfabade4c1507ad14d7d",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [],
+  "prediction": "To answer this question accurately, I would need to refer to the specific slide titled \"Where is Your Focus\" from the book \"Reinventing Organizations for Enterprise Agility.\" However, as I don't have direct access to the book or its content, I cannot provide the exact heading that appears directly above \"How do we work?\" without consulting the source material.\n\nFinal answer: Insufficient evidence.",
+  "case_fingerprint": "956c07c42d5a495979cb41edbc954ad1fba9ea63cdc631d1595dfc3abd98229c",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1901.05280.pdf",
+      "page_num": 5,
+      "origin_doc": "1901.05280.pdf",
+      "slot": "clean",
+      "page_id": "clean:1901.05280.pdf:5",
+      "document_id": "3395cbf4ca71",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The F1 score reported for J & N (2008b) on the WSJ corpus in table 3 is 69.06.\n\nFinal answer: 69.06",
+  "case_fingerprint": "f454e9c86df58c7c6a4096ae36688bf798e5349f3ec0c4827ab09f705e4a63ae",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

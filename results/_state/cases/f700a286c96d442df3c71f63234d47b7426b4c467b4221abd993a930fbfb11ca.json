@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [],
+  "prediction": "The \"Process\" label beside the gears on the \"Where is Your Focus\" slide in Reinventing Organizations for Enterprise Agility is governed by the \"Process\" focus heading. This heading emphasizes the importance of defining clear processes and procedures to ensure efficiency and effectiveness within an organization.\n\nFinal answer: Process",
+  "case_fingerprint": "f700a286c96d442df3c71f63234d47b7426b4c467b4221abd993a930fbfb11ca",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

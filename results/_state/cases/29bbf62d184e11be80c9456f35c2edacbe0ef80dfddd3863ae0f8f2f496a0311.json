@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/Nirvana_band.pdf",
+      "page_num": 13,
+      "origin_doc": "Nirvana_band.pdf",
+      "slot": "clean",
+      "page_id": "clean:Nirvana_band.pdf:13",
+      "document_id": "919a84aa8374",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The green color in the Nirvana band-timeline chart legend represents the role of \"Guitar\".",
+  "case_fingerprint": "29bbf62d184e11be80c9456f35c2edacbe0ef80dfddd3863ae0f8f2f496a0311",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [],
+  "prediction": "To answer the question, I need to refer to the specific data presented in Table 6 of the paper \"Seq2Sick: Evaluating the Robustness of Sequence-to-Sequence Models with Adversarial Examples\". However, as an AI, I don't have direct access to the paper or its tables. Therefore, I cannot provide the exact perplexity score for the Original examples on DUC2003 from Table 6 without consulting the original document.\n\nFinal answer: Insufficient evidence.",
+  "case_fingerprint": "a40121af9648a2ebcc53c2be60ae34dd9dde77e8055b8c20f03623dc0e86af5b",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

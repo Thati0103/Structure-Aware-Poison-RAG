@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/6.pdf",
+      "page_num": 5,
+      "origin_doc": "6.pdf",
+      "slot": "clean",
+      "page_id": "clean:6.pdf:5",
+      "document_id": "6e8b26a7ce15",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The Trading Operating Profit listed under \"As reported\" in the Nestle 2011 Strong Full Year Performance table is 12.5 billion CHF.\n\nFinal answer: 12.5 bn",
+  "case_fingerprint": "b46724a2ffe323798444c762850020c172d6f6769532f6800f05a7cef5281c30",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

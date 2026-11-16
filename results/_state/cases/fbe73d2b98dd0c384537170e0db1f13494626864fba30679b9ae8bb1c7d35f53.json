@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [],
+  "prediction": "The Oklahoma City Dodgers and Tulsa Drillers are listed under the sport of baseball in the Oklahoma professional sports teams tables on page 15.\n\nFinal answer: Baseball",
+  "case_fingerprint": "fbe73d2b98dd0c384537170e0db1f13494626864fba30679b9ae8bb1c7d35f53",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

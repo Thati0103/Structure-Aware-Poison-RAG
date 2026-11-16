@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/2.pdf",
+      "page_num": 4,
+      "origin_doc": "2.pdf",
+      "slot": "clean",
+      "page_id": "clean:2.pdf:4",
+      "document_id": "174cc16b5ef4",
+      "ispoisoned": false,
+      "is_edited": false
+    },
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/duplicates/2.pdf",
+      "page_num": 4,
+      "origin_doc": "2.pdf",
+      "slot": "added",
+      "page_id": "added:2.pdf:4",
+      "document_id": "8b137228fece",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "Based on the vertical-axis title of Figure 3 in the keyword-spotting paper, a higher value means better prediction performance.",
+  "case_fingerprint": "6b4604cb0683455009811661f9c278f084a4aabd501abef3ee96f5499d0af55b",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

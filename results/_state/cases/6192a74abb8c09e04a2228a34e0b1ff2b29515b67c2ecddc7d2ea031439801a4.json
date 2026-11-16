@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1812.06589v2.pdf",
+      "page_num": 6,
+      "origin_doc": "1812.06589v2.pdf",
+      "slot": "clean",
+      "page_id": "clean:1812.06589v2.pdf:6",
+      "document_id": "7b64f3239038",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "Final answer: 15.22%",
+  "case_fingerprint": "6192a74abb8c09e04a2228a34e0b1ff2b29515b67c2ecddc7d2ea031439801a4",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

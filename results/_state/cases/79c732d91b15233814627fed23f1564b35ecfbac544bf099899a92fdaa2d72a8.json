@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [],
+  "prediction": "To answer this question, I need to refer to the specific paper 1911.08976 and its associated Mean MAP score bar chart. However, as I don't have direct access to the paper or the chart, I cannot provide the exact value printed on the y-axis.\n\nFinal answer: Insufficient evidence",
+  "case_fingerprint": "79c732d91b15233814627fed23f1564b35ecfbac544bf099899a92fdaa2d72a8",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

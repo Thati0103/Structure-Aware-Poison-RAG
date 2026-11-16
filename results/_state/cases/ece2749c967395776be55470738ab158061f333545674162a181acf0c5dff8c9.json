@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1702.08694v3.pdf",
+      "page_num": 8,
+      "origin_doc": "1702.08694v3.pdf",
+      "slot": "clean",
+      "page_id": "clean:1702.08694v3.pdf:8",
+      "document_id": "3752b765275e",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The recall of Binarization on the ctg dataset is below 0.5.\n\nFinal answer: Below 0.5",
+  "case_fingerprint": "ece2749c967395776be55470738ab158061f333545674162a181acf0c5dff8c9",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

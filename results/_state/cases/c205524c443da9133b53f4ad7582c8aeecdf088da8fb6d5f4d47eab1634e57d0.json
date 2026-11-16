@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/2004_World_Series.pdf",
+      "page_num": 5,
+      "origin_doc": "2004_World_Series.pdf",
+      "slot": "clean",
+      "page_id": "clean:2004_World_Series.pdf:5",
+      "document_id": "1d051b4c83c7",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The box-score table shows that Boston had 13 hits in Game 1 of the 2004 World Series.\n\nFinal answer: 13",
+  "case_fingerprint": "c205524c443da9133b53f4ad7582c8aeecdf088da8fb6d5f4d47eab1634e57d0",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

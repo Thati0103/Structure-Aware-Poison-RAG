@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/2018_Chicago_Bears_season.pdf",
+      "page_num": 7,
+      "origin_doc": "2018_Chicago_Bears_season.pdf",
+      "slot": "clean",
+      "page_id": "clean:2018_Chicago_Bears_season.pdf:7",
+      "document_id": "7a2bd9e99ee7",
+      "ispoisoned": false,
+      "is_edited": false
+    },
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/duplicates/2018_Chicago_Bears_season.pdf",
+      "page_num": 7,
+      "origin_doc": "2018_Chicago_Bears_season.pdf",
+      "slot": "added",
+      "page_id": "added:2018_Chicago_Bears_season.pdf:7",
+      "document_id": "40ebbb2c9a31",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The jersey number listed for quarterback Tyson Bagent is 17.\n\nFinal answer: 17",
+  "case_fingerprint": "adc67c59f368369c5f2424a0822fb7ce67e2f70953a05da277d79ba2f3191c20",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}
