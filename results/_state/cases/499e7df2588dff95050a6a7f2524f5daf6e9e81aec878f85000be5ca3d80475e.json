@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [],
+  "prediction": "To provide an accurate answer, I would need to refer to the specific data or presentation from the Alcatel-Lucent overview mentioned in the question. However, as of my last update, there isn't a readily available public document or summary that directly addresses the exact percentage of 2010 revenues attributed to North America in the \"GLOBAL REACH\" slide.\n\nFinal answer: Insufficient evidence.",
+  "case_fingerprint": "499e7df2588dff95050a6a7f2524f5daf6e9e81aec878f85000be5ca3d80475e",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

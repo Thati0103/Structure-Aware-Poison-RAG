@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [],
+  "prediction": "To provide an accurate answer, I would need to refer to the specific data presented in Table 4 of the \"Intensive Care Patient Notes\" paper. However, as I don't have direct access to the document or the ability to analyze tables from external sources, I cannot extract the specific Cohen's Kappa value for Developmental Delay between the ETM and JTW annotator pair.\n\nFinal answer: Insufficient evidence.",
+  "case_fingerprint": "3d9914ccbf3e5d85d7282de05b03cc1ee288b30085b63046ec36a4887e5a8839",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1703.04887v4.pdf",
+      "page_num": 8,
+      "origin_doc": "1703.04887v4.pdf",
+      "slot": "clean",
+      "page_id": "clean:1703.04887v4.pdf:8",
+      "document_id": "ba6fcf9349e7",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The BLEU score on NIST03 with N = 25 is above 36.\n\nFinal answer: Above",
+  "case_fingerprint": "c9c5719d3aaaa051d9e3c841855867bf941943741483fce1ebd7cf1673ac0ab7",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

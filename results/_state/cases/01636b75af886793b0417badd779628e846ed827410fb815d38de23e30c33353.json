@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [],
+  "prediction": "To answer this question, I would need to refer to the specific data presented in Table 3 of the paper \"Improving Neural Machine Translation with Conditional Sequence Generative Adversarial Nets\". However, as an AI, I don't have direct access to the paper or its tables. The BLEU score for NIST03 when N = 25 is not provided here.\n\nFinal answer: Insufficient evidence.",
+  "case_fingerprint": "01636b75af886793b0417badd779628e846ed827410fb815d38de23e30c33353",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

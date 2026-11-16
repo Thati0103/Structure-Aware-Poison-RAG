@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [],
+  "prediction": "The horizontal-axis title of Figure 6, which shows the mean macro f1-score for two image sizes, is \"Image Size\". This information is typically found in the figure caption or legend of the publication.\n\nFinal answer: Image Size",
+  "case_fingerprint": "0805dd9f39cb8afe2d899230488e03bad3cb9283a5e26c68492056263dd97fe6",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

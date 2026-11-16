@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1807.07961.pdf",
+      "page_num": 6,
+      "origin_doc": "1807.07961.pdf",
+      "slot": "clean",
+      "page_id": "clean:1807.07961.pdf:6",
+      "document_id": "a7aece0ecbfc",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The ROC Area of T-LSTM on the AA-Sentiment dataset is 0.931.\n\nFinal answer: 0.931",
+  "case_fingerprint": "e37b2b0a2bb21813faf8ae8308561cf61cd9f711c4b28a8abb49e5fc4c740200",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

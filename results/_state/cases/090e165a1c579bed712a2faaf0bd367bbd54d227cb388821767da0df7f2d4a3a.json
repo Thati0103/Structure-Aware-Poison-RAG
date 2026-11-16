@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/South_America.pdf",
+      "page_num": 23,
+      "origin_doc": "South_America.pdf",
+      "slot": "clean",
+      "page_id": "clean:South_America.pdf:23",
+      "document_id": "b7348ff97667",
+      "ispoisoned": false,
+      "is_edited": false
+    },
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/duplicates/South_America.pdf",
+      "page_num": 23,
+      "origin_doc": "South_America.pdf",
+      "slot": "added",
+      "page_id": "added:South_America.pdf:23",
+      "document_id": "434daa87606d",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The nominal GDP of Brazil for 2017, as shown in the table, is 2,140,940.",
+  "case_fingerprint": "090e165a1c579bed712a2faaf0bd367bbd54d227cb388821767da0df7f2d4a3a",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

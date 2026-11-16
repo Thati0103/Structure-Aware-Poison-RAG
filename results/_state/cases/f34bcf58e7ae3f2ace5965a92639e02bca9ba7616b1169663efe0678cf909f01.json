@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/7.pdf",
+      "page_num": 7,
+      "origin_doc": "7.pdf",
+      "slot": "clean",
+      "page_id": "clean:7.pdf:7",
+      "document_id": "a35deba54010",
+      "ispoisoned": false,
+      "is_edited": false
+    },
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/duplicates/7.pdf",
+      "page_num": 7,
+      "origin_doc": "7.pdf",
+      "slot": "added",
+      "page_id": "added:7.pdf:7",
+      "document_id": "efcf388c3867",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The N. America percentage printed in the Alcatel-Lucent GLOBAL REACH revenue strip is approximately 36%, which is indeed greater than 33%. Therefore, the answer is yes.\n\nFinal answer: Yes",
+  "case_fingerprint": "f34bcf58e7ae3f2ace5965a92639e02bca9ba7616b1169663efe0678cf909f01",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

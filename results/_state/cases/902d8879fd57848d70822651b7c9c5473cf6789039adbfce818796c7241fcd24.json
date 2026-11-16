@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1901.05280.pdf",
+      "page_num": 5,
+      "origin_doc": "1901.05280.pdf",
+      "slot": "clean",
+      "page_id": "clean:1901.05280.pdf:5",
+      "document_id": "3395cbf4ca71",
+      "ispoisoned": false,
+      "is_edited": false
+    },
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/duplicates/1901.05280.pdf",
+      "page_num": 5,
+      "origin_doc": "1901.05280.pdf",
+      "slot": "added",
+      "page_id": "added:1901.05280.pdf:5",
+      "document_id": "b469a3129c83",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The F1 score reported for J & N (2008b) on the WSJ corpus in table 3 is 81.75.\n\nFinal answer: 81.75",
+  "case_fingerprint": "902d8879fd57848d70822651b7c9c5473cf6789039adbfce818796c7241fcd24",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

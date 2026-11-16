@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [],
+  "prediction": "To determine if the Activities are explicitly linked to the Mission by the lower label on the Theory of Change slide, we would need to analyze the specific content and structure of the slide. Typically, a Theory of Change diagram includes a Mission statement at the top, followed by a series of activities or interventions that are intended to lead to short-term outcomes, which then contribute to long-term outcomes.\n\nIf the slide follows this standard layout, the lower labels under each activity should describe how that particular activity contributes to achieving the Mission. However, without seeing the actual slide, it's impossible to confirm this.\n\nFinal answer: Insufficient evidence.",
+  "case_fingerprint": "7de2bb27f51849df628dfd6f16ca8d874e429a1b2e1307734d91f4a718af46cf",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

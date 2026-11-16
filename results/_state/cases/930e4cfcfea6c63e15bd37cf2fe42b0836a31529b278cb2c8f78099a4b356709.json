@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/5.pdf",
+      "page_num": 8,
+      "origin_doc": "5.pdf",
+      "slot": "clean",
+      "page_id": "clean:5.pdf:8",
+      "document_id": "dab2b8a5ef14",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The left vertical axis in the upper panel (a) of Figure 4.1 in \"Generalization and Hyperparameter Optimization\" is labeled as \"Test set MSE\".",
+  "case_fingerprint": "930e4cfcfea6c63e15bd37cf2fe42b0836a31529b278cb2c8f78099a4b356709",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

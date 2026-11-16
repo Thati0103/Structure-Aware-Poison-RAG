@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/8.pdf",
+      "page_num": 6,
+      "origin_doc": "8.pdf",
+      "slot": "clean",
+      "page_id": "clean:8.pdf:6",
+      "document_id": "ce83789cf3df",
+      "ispoisoned": false,
+      "is_edited": false
+    },
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/duplicates/8.pdf",
+      "page_num": 6,
+      "origin_doc": "8.pdf",
+      "slot": "added",
+      "page_id": "added:8.pdf:6",
+      "document_id": "be769d29da44",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The country assigned mobile display ad spend of EUR 7.6 million is Turkey.\n\nFinal answer: Turkey",
+  "case_fingerprint": "b1b96591c398fa3e55fd8bac8293bfea99a19c08a475fff75f7d4e04fe99c9c7",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

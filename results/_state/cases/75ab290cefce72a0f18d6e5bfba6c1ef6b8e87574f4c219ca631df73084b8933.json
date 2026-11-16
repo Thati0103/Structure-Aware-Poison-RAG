@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [],
+  "prediction": "To answer this question, I would need to refer to the specific data presented in Table 4 of the CN-Celeb paper. However, since I don't have direct access to the paper or the table, I cannot provide the exact value without reproducing copyrighted material.\n\nFinal answer: Insufficient evidence.",
+  "case_fingerprint": "75ab290cefce72a0f18d6e5bfba6c1ef6b8e87574f4c219ca631df73084b8933",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/layout/Six_Flags_Over_Georgia_layout.pdf",
+      "page_num": 7,
+      "origin_doc": "Six_Flags_Over_Georgia.pdf",
+      "slot": "clean",
+      "page_id": "clean:Six_Flags_Over_Georgia.pdf:7",
+      "document_id": "332bccf622ce",
+      "ispoisoned": true,
+      "is_edited": true
+    }
+  ],
+  "prediction": "The rides listed under the Pay-per-ride attractions heading in the Six Flags Over Georgia ride tables include:\n\n1. Tweety's Tweehouse\n2. Bugs Bunny High Sea Adventure\n3. Yosemite Sam's Wacky Wagons\n4. Acme Trucking Co.\n5. Daffy Duck's Bucket Blasters\n6. Speedy Gonzales Speed Boats\n7. Looney Tunes Adventure Camp\n8. Superman: Tower of Power\n9. Batman Batcopters\n10. Wonder Woman Flight School\n\nFinal answer: Tweety's Tweehouse, Bugs Bunny High Sea Adventure, Yosemite Sam's Wacky Wagons, Acme Trucking Co., Daffy Duck's Bucket Blasters, Speedy Gonzales Speed Boats, Looney Tunes Adventure Camp, Superman: Tower of Power, Batman Batcopters, Wonder Woman Flight School.",
+  "case_fingerprint": "25d43baf6b0e2982b1c3b5670be63c7c1dd0a78c2d259cdf3502abf59745db2b",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

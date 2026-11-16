@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1702.08694v3.pdf",
+      "page_num": 8,
+      "origin_doc": "1702.08694v3.pdf",
+      "slot": "clean",
+      "page_id": "clean:1702.08694v3.pdf:8",
+      "document_id": "3752b765275e",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The recall of C-Tarone is far below that of Binarization for the \"magic\" dataset, where the recall for C-Tarone is approximately 0.2 while for Binarization it is around 1.0.\n\nFinal answer: magic",
+  "case_fingerprint": "2d9bffeaf1d048a3b652d86526e2c64461087dd6374f7e48a6d63f03f4597c42",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

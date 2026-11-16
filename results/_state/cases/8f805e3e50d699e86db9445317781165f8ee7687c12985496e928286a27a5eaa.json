@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1803.01128v3.pdf",
+      "page_num": 6,
+      "origin_doc": "1803.01128v3.pdf",
+      "slot": "clean",
+      "page_id": "clean:1803.01128v3.pdf:6",
+      "document_id": "b303f57dba7f",
+      "ispoisoned": false,
+      "is_edited": false
+    },
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/duplicates/1803.01128v3.pdf",
+      "page_num": 6,
+      "origin_doc": "1803.01128v3.pdf",
+      "slot": "added",
+      "page_id": "added:1803.01128v3.pdf:6",
+      "document_id": "4360212d5c68",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The perplexity of the 1-keyword adversarial examples on DUC2004 is 199.01.\n\nFinal answer: 199.01",
+  "case_fingerprint": "8f805e3e50d699e86db9445317781165f8ee7687c12985496e928286a27a5eaa",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

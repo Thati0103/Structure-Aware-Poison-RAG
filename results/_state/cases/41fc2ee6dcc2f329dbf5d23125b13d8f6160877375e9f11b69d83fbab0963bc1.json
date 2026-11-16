@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1911.08976.pdf",
+      "page_num": 4,
+      "origin_doc": "1911.08976.pdf",
+      "slot": "clean",
+      "page_id": "clean:1911.08976.pdf:4",
+      "document_id": "7f0858066b61",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The maximum value printed on the y-axis of the Mean MAP score bar chart in paper 1911.08976 is 0.8.",
+  "case_fingerprint": "41fc2ee6dcc2f329dbf5d23125b13d8f6160877375e9f11b69d83fbab0963bc1",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

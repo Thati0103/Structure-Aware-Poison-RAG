@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [],
+  "prediction": "The learning-sample size n for the upper-left plot in Figure 2 of the learning-sample paper is 100.\n\nFinal answer: 100",
+  "case_fingerprint": "52eb62457a09e5f125b0acdd6f80a07509101255ac0bfda09124d445e29178f2",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1810.03459.pdf",
+      "page_num": 4,
+      "origin_doc": "1810.03459.pdf",
+      "slot": "clean",
+      "page_id": "clean:1810.03459.pdf:4",
+      "document_id": "7f80b2918d7c",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The bar chart in the paper shows that for the ~5 hours training condition, the CER (Character Error Rate) for the leftmost group (Assamese) reaches approximately 50%. \n\nFinal answer: 50%",
+  "case_fingerprint": "66098591feac7fe62c95d28d4f87bd8f3b888e83f7b8ab0f63e1c179b1b563f6",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

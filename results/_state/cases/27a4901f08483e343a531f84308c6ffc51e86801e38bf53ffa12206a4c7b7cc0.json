@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1611.02550.pdf",
+      "page_num": 6,
+      "origin_doc": "1611.02550.pdf",
+      "slot": "clean",
+      "page_id": "clean:1611.02550.pdf:6",
+      "document_id": "1bcd67d003d2",
+      "ispoisoned": false,
+      "is_edited": false
+    },
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/duplicates/1611.02550.pdf",
+      "page_num": 6,
+      "origin_doc": "1611.02550.pdf",
+      "slot": "added",
+      "page_id": "added:1611.02550.pdf:6",
+      "document_id": "b31f29dc827c",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The classifier model produced the word embeddings shown in the top t-SNE panel.\n\nFinal answer: classifier",
+  "case_fingerprint": "27a4901f08483e343a531f84308c6ffc51e86801e38bf53ffa12206a4c7b7cc0",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

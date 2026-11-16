@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1611.04363v2.pdf",
+      "page_num": 2,
+      "origin_doc": "1611.04363v2.pdf",
+      "slot": "clean",
+      "page_id": "clean:1611.04363v2.pdf:2",
+      "document_id": "1799ea4fb59e",
+      "ispoisoned": false,
+      "is_edited": false
+    },
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/duplicates/1611.04363v2.pdf",
+      "page_num": 2,
+      "origin_doc": "1611.04363v2.pdf",
+      "slot": "added",
+      "page_id": "added:1611.04363v2.pdf:2",
+      "document_id": "a2ba3ad64bc0",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The decline probability on the QA-Expert dataset for the 'without' bar is approximately 0.65.\n\nFinal answer: 0.65",
+  "case_fingerprint": "160f9e33a9ffdca9f4647df6d7bfb5c0a12b606cfac0394fe7c30dd52c849512",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

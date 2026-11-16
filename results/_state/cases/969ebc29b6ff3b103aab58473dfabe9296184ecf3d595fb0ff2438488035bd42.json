@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1611.04363v2.pdf",
+      "page_num": 2,
+      "origin_doc": "1611.04363v2.pdf",
+      "slot": "clean",
+      "page_id": "clean:1611.04363v2.pdf:2",
+      "document_id": "1799ea4fb59e",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "Final answer: Paper-Reviewer\n\nThe figure shows the decline probability for three datasets: QA-Expert, Paper-Reviewer, and Online Evaluation. The Paper-Reviewer dataset has the lowest decline probability among the three.",
+  "case_fingerprint": "969ebc29b6ff3b103aab58473dfabe9296184ecf3d595fb0ff2438488035bd42",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

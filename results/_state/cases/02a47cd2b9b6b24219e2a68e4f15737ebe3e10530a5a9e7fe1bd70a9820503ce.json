@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1803.01128v3.pdf",
+      "page_num": 6,
+      "origin_doc": "1803.01128v3.pdf",
+      "slot": "clean",
+      "page_id": "clean:1803.01128v3.pdf:6",
+      "document_id": "b303f57dba7f",
+      "ispoisoned": false,
+      "is_edited": false
+    },
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/duplicates/1803.01128v3.pdf",
+      "page_num": 6,
+      "origin_doc": "1803.01128v3.pdf",
+      "slot": "added",
+      "page_id": "added:1803.01128v3.pdf:6",
+      "document_id": "4360212d5c68",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The perplexity of the 2-keyword adversarial examples on DUC2003 is 352.12.\n\nFinal answer: 352.12",
+  "case_fingerprint": "02a47cd2b9b6b24219e2a68e4f15737ebe3e10530a5a9e7fe1bd70a9820503ce",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "error": null,
+  "selected": [
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/clean/1.pdf",
+      "page_num": 5,
+      "origin_doc": "1.pdf",
+      "slot": "clean",
+      "page_id": "clean:1.pdf:5",
+      "document_id": "bf2a586b9435",
+      "ispoisoned": false,
+      "is_edited": false
+    },
+    {
+      "filepath": "/content/drive/MyDrive/visual_rag_v3/data/docs/duplicates/1.pdf",
+      "page_num": 5,
+      "origin_doc": "1.pdf",
+      "slot": "added",
+      "page_id": "added:1.pdf:5",
+      "document_id": "990133771aef",
+      "ispoisoned": false,
+      "is_edited": false
+    }
+  ],
+  "prediction": "The red-trajectory legend in Figure 5 of the indoor-localization paper names two sensor modalities: UWB (Ultra Wide Band) and IMU (Inertial Measurement Unit). Therefore, the answer is two.\n\nFinal answer: two",
+  "case_fingerprint": "441af056796e057f568611b20e180115b9da19c7882a14735e2aa22e1bee48af",
+  "source_run": "/content/drive/MyDrive/visual_rag_v3/results/experiment_b_f1d0cc089e91",
+  "observed_models": {
+    "generator": {
+      "base_model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "base_commit": null,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}
