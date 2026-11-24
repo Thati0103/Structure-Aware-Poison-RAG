@@ -29,7 +29,7 @@ The commands below run from the project folder.
 
 **Dataset folders:** Under `data/` folder contains `docs/`, `questions.csv`, and `questions.txt`.
 
-**PDF folders** under each owner's `docs/`:
+**PDF folders** under `docs/`:
 
 | Folder | Contents |
 | --- | --- |
