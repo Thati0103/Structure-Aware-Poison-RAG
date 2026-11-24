@@ -27,7 +27,7 @@ The commands below run from the project folder.
 
 ## 2. Prepare data and config
 
-**Dataset folders:** `data/Sindhu/`, `data/Neeharika/`, and `data/Paul/`. Each contains `docs/`, `questions.csv`, and `questions.txt`. The default `config.json` continues to select Sindhu's existing pilot at its new location. To select another owner, update the CSV, clean, variant, duplicate, and generated-annotation paths together.
+**Dataset folders:** Under `data/` folder contains `docs/`, `questions.csv`, and `questions.txt`.
 
 **PDF folders** under each owner's `docs/`:
 
